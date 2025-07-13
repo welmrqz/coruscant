@@ -1,10 +1,10 @@
 services:
-  nextjs:
-    build: .
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/app         # Mount current dir for hot-reload
-      - /app/node_modules  # Avoid overwriting node_modules inside container
-    environment:
-      - NODE_ENV=development
+    web:
+        build: .
+        ports:
+            - "3000:3000"
+        volumes:
+            - .:/app             # Mount current dir for hot-reload
+            - /app/node_modules  # Avoid overwriting node_modules inside container
+        environment:
+            - NODE_ENV=development
